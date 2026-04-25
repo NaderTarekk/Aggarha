@@ -14,7 +14,7 @@ const carsData = [
         transmission: 'أوتوماتيك',
         seats: 7,
         type: 'SUV',
-        image: 'https://cdn.pixabay.com/photo/2017/08/09/02/13/bmw-2615009_640.jpg',
+        image: 'assets/bmw-x7.jpg',
         description: 'SUV فاخرة',
         color: 'from-purple-400 to-blue-400'
     },
@@ -29,7 +29,7 @@ const carsData = [
         transmission: 'أوتوماتيك',
         seats: 4,
         type: 'سيدان',
-        image: 'https://cdn.pixabay.com/photo/2015/11/08/23/30/car-1033592_640.jpg',
+        image: 'assets/mercedes-c63.jpg',
         description: 'سيدان رياضية',
         color: 'from-blue-400 to-purple-400'
     },
@@ -44,7 +44,7 @@ const carsData = [
         transmission: 'أوتوماتيك',
         seats: 2,
         type: 'رياضية',
-        image: 'https://cdn.pixabay.com/photo/2014/03/29/09/17/car-297821_640.jpg',
+        image: 'assets/porsche-911.jpg',
         description: 'رياضية فاخرة',
         color: 'from-pink-400 to-purple-400'
     },
@@ -59,7 +59,7 @@ const carsData = [
         transmission: 'أوتوماتيك',
         seats: 5,
         type: 'SUV',
-        image: 'https://cdn.pixabay.com/photo/2019/03/07/14/42/land-rover-4038341_640.jpg',
+        image: 'assets/range-rover.jpg',
         description: 'SUV رياضية',
         color: 'from-indigo-400 to-blue-400'
     },
@@ -74,7 +74,7 @@ const carsData = [
         transmission: 'أوتوماتيك',
         seats: 5,
         type: 'سيدان',
-        image: 'https://cdn.pixabay.com/photo/2016/10/11/13/48/tesla-1730645_640.jpg',
+        image: 'assets/tesla-model-s.jpg',
         description: 'سيدان كهربائية',
         color: 'from-red-400 to-pink-400'
     },
@@ -89,7 +89,7 @@ const carsData = [
         transmission: 'أوتوماتيك',
         seats: 5,
         type: 'سيدان',
-        image: 'https://cdn.pixabay.com/photo/2014/04/14/20/41/audi-326645_640.jpg',
+        image: 'assets/audi-a8.jpg',
         description: 'سيدان فاخرة',
         color: 'from-violet-400 to-purple-400'
     },
@@ -104,7 +104,7 @@ const carsData = [
         transmission: 'أوتوماتيك',
         seats: 4,
         type: 'SUV',
-        image: 'https://cdn.pixabay.com/photo/2018/05/24/21/47/supercar-3428742_640.jpg',
+        image: 'assets/lamborghini.jpg',
         description: 'SUV رياضية خارقة',
         color: 'from-yellow-400 to-red-400'
     },
@@ -119,7 +119,7 @@ const carsData = [
         transmission: 'أوتوماتيك',
         seats: 2,
         type: 'رياضية',
-        image: 'https://cdn.pixabay.com/photo/2015/01/20/13/13/ferrari-604237_640.jpg',
+        image: 'assets/ferrari.jpg',
         description: 'رياضية إيطالية',
         color: 'from-red-500 to-orange-400'
     }
