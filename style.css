@@ -3,7 +3,7 @@
     --primary: #9333ea;
     --primary-dark: #7e22ce;
     --secondary: #3b82f6;
-    --light: #f3f4f6;
+    --light: #dddddd;
     --dark: #111827;
     --danger: #ef4444;
 }
@@ -20,7 +20,7 @@ html {
 
 body {
     font-family: 'Tajawal', sans-serif;
-    background-color: var(--light);
+    background-color: var(--light) ;
     color: var(--dark);
     direction: rtl;
     overflow-x: hidden;
