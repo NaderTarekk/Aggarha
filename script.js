@@ -180,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showPage('home');
     initializeEventListeners();
     loadCarsGrid();
+    loadHomeCarsPreview();
     
     // Add scroll event listener for nav enhancement
     window.addEventListener('scroll', () => {
@@ -323,6 +324,53 @@ function createCarCard(car) {
     `;
 
     return card;
+}
+
+function loadHomeCarsPreview() {
+    const grid = document.getElementById('home-cars-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    carsData.slice(0, 3).forEach((car, i) => {
+        const card = document.createElement('div');
+        card.className = 'group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100';
+        card.innerHTML = `
+            <div class="relative h-56 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                <img src="${car.image}" alt="${car.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.onerror=null;this.style.background='linear-gradient(135deg,#9333ea,#3b82f6)';this.style.objectFit='contain';" />
+                ${i === 0 ? '<span class="absolute top-4 right-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">الأكثر طلباً</span>' : ''}
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+            </div>
+            <div class="p-6">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <h3 class="text-xl font-black text-gray-900">${car.name}</h3>
+                        <p class="text-purple-600 font-semibold text-xs mt-1">${car.description}</p>
+                    </div>
+                    <div class="flex items-center gap-1 bg-amber-50 px-2 py-1 rounded-lg">
+                        <i class="fas fa-star text-amber-400 text-xs"></i>
+                        <span class="text-xs font-bold text-amber-700">${car.rating}.0</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 mb-4 text-xs text-gray-500">
+                    <span class="flex items-center gap-1"><i class="fas fa-calendar text-purple-400"></i>${car.model}</span>
+                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <span class="flex items-center gap-1"><i class="fas fa-gas-pump text-blue-400"></i>${car.fuel}</span>
+                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <span class="flex items-center gap-1"><i class="fas fa-users text-green-400"></i>${car.seats}</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div>
+                        <p class="text-xs text-gray-400">يومياً</p>
+                        <p class="text-2xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">${car.price} <span class="text-sm">ر.س</span></p>
+                    </div>
+                    <button onclick="goToCarDetails(${car.id})" class="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-bold text-sm shadow-md shadow-purple-600/20 hover:shadow-lg hover:shadow-purple-600/30 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2">
+                        التفاصيل
+                        <i class="fas fa-arrow-left text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
 }
 
 function goToCarDetails(carId) {
