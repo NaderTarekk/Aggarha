@@ -869,3 +869,11 @@ img {
         border-radius: 1.5rem;
     }
 }
+
+
+#home-cars-grid > div {
+    box-shadow: 0 10px 40px rgba(163, 109, 214, 0.815);
+}
+#home-cars-grid > div:hover {
+    box-shadow: 0 20px 50px rgb(146, 51, 234);
+}
